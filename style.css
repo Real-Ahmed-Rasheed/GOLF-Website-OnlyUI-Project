@@ -1,0 +1,545 @@
+@font-face {
+    font-family: Mont-Med;
+    src: url(./Assests/Montserrat/Montserrat-Medium.ttf);
+}
+
+@font-face {
+    font-family: Mont-Light;
+    src: url(./Assests/Montserrat/Montserrat-Light.ttf);
+}
+
+@font-face {
+    font-family: Mont-Semi;
+    src: url(./Assests/Montserrat/Montserrat-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: Mont-Bold;
+    src: url(./Assests/Montserrat/Montserrat-Bold.ttf);
+}
+
+@font-face {
+    font-family: Mont-Bold-Extra;
+    src: url(./Assests/Montserrat/Montserrat-ExtraBold.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    /* background-color: #000; */
+    color: white;
+    font-family: Mont-Med;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    background-color: #000;
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #95c11e;
+    border-radius: 12px;
+}
+
+
+#cursor {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #95c11e;
+    position: fixed;
+    z-index: 9;
+}
+
+#blur {
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    background-color: rgba(150, 193, 30, 0.3);
+    position: fixed;
+    filter: blur(80px);
+    z-index: 8;
+}
+
+nav {
+    height: 120px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    position: fixed;
+    z-index: 15;
+}
+
+nav img {
+    height: 80px;
+}
+
+nav h4 {
+    text-transform: uppercase;
+    font-weight: 100;
+}
+
+nav button {
+    padding: 18px 39px;
+    border-radius: 30px;
+    background-color: #000;
+    border: 3px solid #95c11e;
+    color: white;
+    font-family: Mont-Semi;
+}
+
+.mainVideo {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+
+#main {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.40);
+}
+
+#page1 {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    position: relative;
+}
+
+#page1 h1 {
+    font-size: 10vw;
+    font-family: Mont-Bold;
+    width: 80%;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    line-height: 140px;
+}
+
+#page1 h1::before {
+    content: 'EAT. DRINK. PLAY.';
+    text-align: center;
+    font-size: 10vw;
+    font-family: Mont-Bold;
+    -webkit-text-stroke: 2px #95c11e;
+    color: black;
+    position: absolute;
+    left: 0.4%;
+    top: -1%;
+    z-index: -1;
+}
+
+#page1 h4 {
+    font-family: Mont-Bold-Extra;
+    font-size: 2vw;
+}
+
+#page1>p {
+    font-family: Mont-Light;
+    width: 50%;
+    text-align: center;
+    font-size: 1.3vw;
+}
+
+#page2 {
+    width: 100%;
+    position: relative;
+    min-height: 100vh;
+    z-index: 10;
+}
+
+.banner {
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+}
+
+.bannerIn {
+    animation: bannerText;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.banner h1 {
+    display: inline-block;
+    font-size: 7vw;
+    font-family: Mont-Bold-Extra;
+    font-weight: 900;
+    text-transform: uppercase;
+    -webkit-text-stroke: 2px white;
+    margin-right: 60px;
+    color: black;
+    transition: all linear 0.3s;
+    padding: 20px;
+}
+
+.banner::-webkit-scrollbar {
+    display: none;
+}
+
+.bannerIn h1:hover {
+    color: #95c11e;
+    -webkit-text-stroke: 2px #95c11e;
+}
+
+@keyframes bannerText {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.about-us {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.about-us img {
+    height: 180px;
+    width: 180px;
+    border-radius: 14px;
+}
+
+.about-us img:hover {
+    scale: 1.1;
+    transition: scale .3s ease-in-out;
+}
+
+.about-us .content {
+    width: 50%;
+    text-align: center;
+}
+
+.about-us .content * {
+    padding-bottom: 40px;
+}
+
+.about-us .content h1 {
+    font-size: 3vw;
+    font-family: Mont-Bold-Extra;
+    text-transform: uppercase;
+}
+
+.about-us .content p {
+    font-size: 1vw;
+    text-transform: uppercase;
+    line-height: 30px;
+}
+
+#page3 {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+#page3>img {
+    position: absolute;
+    /* left: 10%; */
+    top: 0;
+    width: 200px;
+}
+
+.cardContainer {
+    height: 80vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.cardContainer #card {
+    height: 600px;
+    width: 400px;
+    background-color: #95c11e;
+    overflow: hidden;
+}
+
+.card1,
+.card2,
+.card3 {
+    border-radius: 17px;
+    z-index: 10;
+}
+
+.card1 {
+    background-image: url('./Assests/card1.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.card1::before {
+    content: 'TOPTRACER RANGE';
+    position: absolute;
+    font-family: Mont-Bold-Extra;
+    font-size: 3vw;
+    bottom: 5%;
+    left: 4%;
+}
+
+.card1 .overlay {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to right top, #B3E824, #95c11e);
+    padding: 60px 20px;
+    transition: all ease-in-out .2s;
+    opacity: 0;
+}
+
+.card1:hover .overlay {
+    opacity: 1;
+}
+
+.card1:hover::before {
+    transition: all ease-in-out .2s;
+    opacity: 0;
+}
+
+.card1 .overlay h1 {
+    font-family: Mont-Bold-Extra;
+    color: black;
+    font-size: 3vw;
+    padding-bottom: 20px;
+}
+
+.card1 .overlay p {
+    color: black;
+    line-height: 40px;
+    padding-bottom: 20px;
+}
+
+
+
+
+.card2 {
+    background-image: url('./Assests/card2.webp');
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+.card2::before {
+    content: 'ADVENTURE GOLF';
+    position: absolute;
+    font-family: Mont-Bold-Extra;
+    font-size: 3vw;
+    bottom: 5%;
+    left: 4%;
+}
+
+.card2 .overlay {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to right top, #B3E824, #95c11e);
+    padding: 60px 20px;
+    transition: all ease-in-out .2s;
+    opacity: 0;
+}
+
+.card2:hover .overlay {
+    opacity: 1;
+}
+
+.card2:hover::before {
+    transition: all ease-in-out .2s;
+    opacity: 0;
+}
+
+.card2 .overlay h1 {
+    font-family: Mont-Bold-Extra;
+    color: black;
+    font-size: 3vw;
+    padding-bottom: 20px;
+}
+
+.card2 .overlay p {
+    color: black;
+    line-height: 40px;
+    padding-bottom: 20px;
+}
+
+
+
+.card3 {
+    background-image: url('./Assests/card3.jpg');
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+.card3::before {
+    content: 'GOLF LESSONS';
+    position: absolute;
+    font-family: Mont-Bold-Extra;
+    font-size: 3vw;
+    bottom: 5%;
+    left: 4%;
+}
+
+.card3 .overlay {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to right top, #B3E824, #95c11e);
+    padding: 60px 20px;
+    transition: all ease-in-out .2s;
+    opacity: 0;
+}
+
+.card3:hover .overlay {
+    opacity: 1;
+}
+
+.card3:hover::before {
+    transition: all ease-in-out .2s;
+    opacity: 0;
+}
+
+.card3 .overlay h1 {
+    font-family: Mont-Bold-Extra;
+    color: black;
+    font-size: 3vw;
+    padding-bottom: 20px;
+}
+
+.card3 .overlay p {
+    color: black;
+    line-height: 40px;
+    padding-bottom: 20px;
+}
+
+#page4 {
+    width: 100%;
+    z-index: 11;
+    min-height: 100vh;
+}
+
+.ctaBanner {
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(to right top, #A1D121, #22A437);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ctaBanner img {
+    height: 100%;
+}
+
+.ctaBanner h1 {
+    font-size: 2.6vw;
+    font-family: Mont-Bold-Extra;
+    color: #000;
+    text-align: center;
+}
+
+#foodAndDrinks {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0px 60px;
+    gap: 80px;
+}
+
+
+.swiper {
+    width: 670px;
+    height: 450px;
+    z-index: 11;
+    margin-top: 100px;
+    border-radius: 14px;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+}
+.swiper-pagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease-in-out .2s;
+}
+.swiper-pagination-bullet{
+    background-color: #313131;
+}
+.swiper-pagination-bullet-active{
+    background-color: #000000;
+    border: 3px solid #A1D121;
+    padding: 15px 15px;
+    border-radius: 50%; 
+    position: relative;
+}
+.swiper-pagination-bullet-active::after{
+    content: '';
+    background-color: #B3E824;
+    border-radius: 50%;
+    height: 12px;
+    width: 12px;
+    position: absolute;
+    left: 32%;
+    top: 30%;
+    
+}
+
+.foodText{
+    padding-left: 30px;
+    width: 50%;
+}
+.foodText h1{
+    font-family: Mont-Bold-Extra;
+    font-size: 3vw;
+    padding-bottom: 40px;
+}
+.foodText p{
+    font-family: Mont-Light;
+    font-size: 1.4vw;
+    line-height: 40px;
+    padding-bottom: 40px;
+}
+
+.foodText button{
+    padding: 18px 39px;
+    border-radius: 30px;
+    background-color: #000;
+    border: 3px solid #95c11e;
+    color: white;
+    font-family: Mont-Semi;
+}
+
+#page5{
+    height: 100vh;
+    width: 100%;
+}
